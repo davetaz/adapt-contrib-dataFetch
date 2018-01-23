@@ -38,6 +38,54 @@
       "validators": [],
       "help": "Data source URL (json format only)",
       "translatable": false
+    },
+    "dataSources": {
+      "type": "array",
+      "required": true,
+      "default": "",
+      "title": "Data Sources",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "souceURL" : {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "inputType": "Text",
+            "validators": [],
+            "help": "Data source list URL (json format only)",
+            "translatable": false
+          },
+          "dataPath" : {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "inputType": "Text",
+            "validators": [],
+            "help": "The path to the array of values in the list (e.g. 'results')",
+            "translatable": false
+          },
+          "selectID" : {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "inputType": "Text",
+            "validators": [],
+            "help": "The ID of an item from the list (e.g. ID)",
+            "translatable": false
+          },
+          "selectValue" : {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "inputType": "Text",
+            "validators": [],
+            "help": "The field name for the value to display (e.g. prefLabel)",
+            "translatable": false
+          }
+        }
+      }
     }
   }
 }

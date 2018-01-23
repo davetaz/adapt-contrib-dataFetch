@@ -96,7 +96,7 @@ define(function(require) {
         }
     },
     {
-        template: 'text'
+        template: 'dataFetch'
     });
 
     Adapt.register('dataFetch', dataFetch);
