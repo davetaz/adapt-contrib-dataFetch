@@ -1,0 +1,16 @@
+{
+  "name": "adapt-contrib-dataFetch",
+  "version": "0.0.2",
+  "framework": ">=2",
+  "homepage": "https://github.com/davetaz/adapt-contrib-dataFetch",
+  "issues": "https://github.com/davetaz/adapt-contrib-dataFetch/issues/",
+  "displayName": "Data Fetch",
+  "component": "dataFetch",
+  "description": "Fetches data from a website for use elsewhere.",
+  "main": "/js/adapt-contrib-dataFetch.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-component"
+  ],
+  "license": "GPLv3"
+}
