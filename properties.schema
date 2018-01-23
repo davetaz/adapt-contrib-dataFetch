@@ -39,7 +39,7 @@
         "type": "object",
         "required": true,
         "properties": {
-          "souceURL" : {
+          "sourceURL" : {
             "type": "string",
             "required": true,
             "default": "",
