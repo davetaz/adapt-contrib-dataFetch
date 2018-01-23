@@ -30,15 +30,6 @@
       "help": "This is the instruction text",
       "translatable": true
     },
-    "dataSource": {
-      "type": "string",
-      "required": true,
-      "default": "",
-      "inputType": "Text",
-      "validators": [],
-      "help": "Data source URL (json format only)",
-      "translatable": false
-    },
     "dataSources": {
       "type": "array",
       "required": true,
@@ -83,6 +74,24 @@
             "validators": [],
             "help": "The field name for the value to display (e.g. prefLabel)",
             "translatable": false
+          },
+          "dataKey" : {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "inputType": "Text",
+            "validators": [],
+            "help": "The class name of the select",
+            "translatable": false
+          },
+          "buttonText" : {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "inputType": "Text",
+            "validators": [],
+            "help": "The value on the action/submit",
+            "translatable": true
           }
         }
       }

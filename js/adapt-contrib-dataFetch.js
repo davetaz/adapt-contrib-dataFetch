@@ -17,23 +17,31 @@ define(function(require) {
 
         getData: function() {
             console.log('In HERE');
-            source = this.model.get('dataSource');
-            console.log("1 " + source);
-            $.getJSON( source , function( data ) {
-                  console.log("2 " + source);
-                  console.log(data);
-                  concepts = data.concepts;
-                  var items = [];
-                  $.each( concepts, function( key, val ) {
-                    items.push( "<option id='" + val.id + "' value='"+val.prefLabel+"'>" + val.prefLabel + "</option>" );
-                  });
-                 
-                  $( "<select/>", {
-                    "class": "activity-list",
-                    html: items.join( "" )
-                  }).appendTo( ".dataFetch-body-inner" );
-                }
-            );
+            sources = this.model.get('dataSources');
+            $.each(sources, function(key,value) {
+                source = value["sourceURL"];
+                $.getJSON( source , function( data ) {
+                      id = value["selectID"];
+                      selectValue = value["selectValue"];
+                      path = value["dataPath"];
+                      selectClass = value["dataKey"];
+                      buttonText = value["buttonText"];
+                      datapoints = data;
+                      if (path) {
+                        datapoints = data[path];  
+                      }
+                      var items = [];
+                      $.each( datapoints, function( key, val ) {
+                        items.push( "<option id='" + val[id] + "' value='"+val[selectValue]+"'>" + val[selectValue] + "</option>" );
+                      });
+                     
+                      $( "<select/>", {
+                        "class": selectClass,
+                        html: items.join( "" )
+                      }).appendTo( ".dataFetch-body-inner" );
+                    }
+                );
+            });
         },
 
         setupInview: function() {
